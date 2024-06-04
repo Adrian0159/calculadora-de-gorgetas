@@ -35,7 +35,6 @@ function calcularPessoas(event) {
 }
 botoes.forEach((button) => {
   button.addEventListener("click", escolherPorcentagem);
-  porcentagen = parseFloat(button.value) / 100;
 
   calcular();
 });
@@ -58,12 +57,12 @@ function escolherPorcentagem(event) {
   calcular();
 }
 function calcular() {
-  if (conta > 0 && pessoas > 0 && porcentagen > 0) {
-    valorGorgeta.innerHTML = `$${((porcentagen * conta) / pessoas).toFixed(2)}`;
+  if (conta > 0 && pessoas > 0) {
     valorTotal.innerHTML = `$${(
       (conta + porcentagen * conta) /
       pessoas
     ).toFixed(2)}`;
+    valorGorgeta.innerHTML = `$${((porcentagen * conta) / pessoas).toFixed(2)}`;
   }
 }
 
