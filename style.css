@@ -1,0 +1,276 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Space Mono", monospace;
+}
+
+body {
+  background-color: #c5e4e7;
+}
+
+main {
+  background-color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  max-width: 768px;
+  margin: 0 auto;
+  padding: 24px;
+  border-radius: 16px;
+}
+
+h1 {
+  margin-top: 80px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+h1 img {
+  height: 100%;
+}
+
+h2 {
+  font-size: 14px;
+  font-weight: bold;
+  color: #5e7a7d;
+  margin-bottom: 8px;
+}
+
+h3 {
+  color: #ffffff;
+  font-size: 16px;
+}
+
+.label-conta,
+.label-pessoas {
+  position: relative;
+}
+
+#icone-dolar,
+#icone-pessoa {
+  position: absolute;
+  top: 4px;
+  left: 16px;
+}
+
+#conta {
+  text-align: end;
+  padding: 8px 16px;
+  margin-bottom: 32px;
+  width: 100%;
+  font-size: 20px;
+  font-weight: 700;
+  border: none;
+  border-radius: 4px;
+  color: #00494d;
+  background-color: #f3f8fb;
+  border: 1px solid #c5e4e7;
+}
+
+#pessoas {
+  text-align: end;
+  padding: 8px 16px;
+  width: 100%;
+  font-size: 20px;
+  font-weight: 700;
+  border: none;
+  border-radius: 4px;
+  color: #00494d;
+  background-color: #f3f8fb;
+  border: 1px solid #c5e4e7;
+}
+
+.pessoas-erro {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 700;
+  color: #5e7a7d;
+  margin-bottom: 8px;
+}
+
+.erro {
+  color: #e65757;
+  font-size: 12px;
+  display: none;
+}
+
+#pessoas::placeholder,
+#conta::placeholder {
+  font-weight: 600;
+  font-size: 20px;
+  color: #7f9c9f;
+}
+
+.botoes-porcentagens {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 40px 40px;
+  gap: 16px;
+  margin: 8px 0 24px 0;
+}
+
+.botoes-porcentagens input[type="button"] {
+  background-color: #00494d;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  font-size: 20px;
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+.botoes-porcentagens input[type="button"]:hover {
+  background-color: #0a757a;
+  cursor: pointer;
+}
+
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+#custon {
+  width: 100%;
+  font-size: 20px;
+  font-weight: 700;
+  text-align: end;
+  color: #00494d;
+  background-color: #f3f8fb;
+  border-radius: 4px;
+  border: none;
+  padding: 4px 10px 0 10px;
+  border: 1px solid #c5e4e7;
+}
+
+#custon:focus,
+#pessoas:focus,
+#conta:focus {
+  box-shadow: 0 0 0 0;
+  outline: 0;
+  border: 2px solid #26c0ab;
+}
+
+#custon:hover,
+#pessoas:hover,
+#conta:hover {
+  border: 2px solid #26c0ab;
+}
+
+#custon::placeholder {
+  text-align: center;
+  font-weight: 600;
+  font-size: 20px;
+  color: #7f9c9f;
+}
+
+.calcular {
+  width: 100%;
+  padding: 16px;
+}
+
+.resultado {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  padding: 32px;
+  background-color: #00494d;
+  border-radius: 8px;
+}
+
+.resultado p {
+  color: #7f9c9f;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+#valorGorgeta,
+#valorTotal {
+  color: #26c0ab;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.valor-da-gorgeta {
+  margin-bottom: 32px;
+}
+
+.valor-da-gorgeta,
+.valor-total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#btn-limpar {
+  width: 100%;
+  font-size: 16px;
+  font-weight: 700;
+  background-color: #26c0ab;
+  color: #00494d;
+  text-transform: uppercase;
+  border: none;
+  padding: 12px 0;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#btn-limpar:hover {
+  background-color: #54e9d5;
+}
+
+@media screen and (max-width: 768px) {
+  main {
+    display: block;
+  }
+  .calcular,
+  .resultado {
+    width: 100%;
+  }
+
+  .resultado {
+    margin-top: 32px;
+  }
+
+  h1 {
+    margin-top: 24px;
+    margin-bottom: 16px;
+    height: 40px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .botoes-porcentagens {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, 64px);
+  }
+  .valor-da-gorgeta {
+    margin-bottom: 16px;
+  }
+  .valor-total {
+    margin-bottom: 32px;
+  }
+  #conta,
+  #pessoas,
+  #custon {
+    font-size: 24px;
+    padding: 16px;
+  }
+  .botoes-porcentagens input {
+    font-size: 24px;
+  }
+
+  #valorGorgeta,
+  #valorTotal {
+    font-size: 32px;
+  }
+
+  #btn-limpar {
+    padding: 16px 0;
+    font-size: 18px;
+  }
+}

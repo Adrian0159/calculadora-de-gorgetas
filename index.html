@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Orbitron:wght@400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      type="img/png"
+      sizes="32x32"
+      href="./img/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Tip calculator app</title>
+  </head>
+  <body>
+    <h1><img src="img/logo.svg" alt="logo" /></h1>
+    <main>
+      <section class="calcular">
+        <h2>Conta</h2>
+        <label for="conta" class="label-conta"
+          ><img
+            src="img/icon-dollar.svg"
+            alt="icone de dolar"
+            id="icone-dolar" />
+          <input type="number" id="conta" placeholder="0"
+        /></label>
+
+        <h2>Selecione a gorgeta %</h2>
+        <div class="botoes-porcentagens">
+          <input type="button" value="5%" />
+          <input type="button" value="10%" />
+          <input type="button" value="15%" />
+          <input type="button" value="25%" />
+          <input type="button" value="50%" />
+          <input type="number" id="custon" placeholder="Custom" />
+        </div>
+        <div class="pessoas-erro">
+          <p>Números de pessoas</p>
+          <div class="erro">
+            <p>Não pode ser zero</p>
+          </div>
+        </div>
+
+        <label for="pessoas" class="label-pessoas"
+          ><img
+            src="img/icon-person.svg"
+            alt="icone de pessoa"
+            id="icone-pessoa" />
+          <input type="number" id="pessoas" placeholder="0"
+        /></label>
+      </section>
+      <section class="resultado">
+        <div>
+          <div class="valor-da-gorgeta">
+            <div>
+              <h3>Gorgetas</h3>
+              <p>/ pessoa</p>
+            </div>
+            <div id="valorGorgeta">$0.00</div>
+          </div>
+          <div class="valor-total">
+            <div>
+              <h3>Total</h3>
+              <p>/ pessoa</p>
+            </div>
+            <div id="valorTotal">$0.00</div>
+          </div>
+        </div>
+        <button id="btn-limpar">limpar</button>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
